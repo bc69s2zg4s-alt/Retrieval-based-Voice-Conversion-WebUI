@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#050509">
+<meta name="description" content="Voice Deep — преобразование голоса">
+<title>VOICE DEEP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header>
+    <div class="logo">
+        <span class="logo-dot"></span>
+        VOICE<span>DEEP</span>
+    </div>
+    <div class="status">
+        <span></span>
+        ONLINE
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-badge">AI VOICE CONVERTER</div>
+        <h1>
+            Сделай голос<br>
+            <span>глубже.</span>
+        </h1>
+        <p>
+            Загрузи запись или запиши голос —
+            мы преобразуем его в глубокий мужской голос.
+        </p>
+    </section>
+    <section class="converter">
+        <div class="upload-box" id="uploadBox">
+            <div class="mic-circle">
+                <div class="mic-icon">🎙</div>
+            </div>
+            <h2>Добавь голос</h2>
+            <p>
+                Запиши голос прямо здесь<br>
+                или выбери аудиофайл
+            </p>
+            <div class="buttons">
+                <button class="primary" id="recordButton">
+                    <span class="button-icon">●</span>
+                    Записать голос
+                </button>
+                <label class="secondary">
+                    <span>＋</span>
+                    Загрузить файл
+                    <input
+                        type="file"
+                        id="audioInput"
+                        accept="audio/*"
+                        hidden
+                    >
+                </label>
+            </div>
+            <div class="record-time" id="recordTime">
+                00:00
+            </div>
+        </div>
+        <div class="audio-card hidden" id="inputCard">
+            <div class="audio-info">
+                <div class="audio-icon">
+                    ♪
+                </div>
+                <div>
+                    <strong id="fileName">
+                        Аудиофайл
+                    </strong>
+                    <small id="fileSize">
+                        —
+                    </small>
+                </div>
+            </div>
+            <audio
+                id="audioPlayer"
+                controls
+            ></audio>
+            <button
+                class="convert-button"
+                id="convertButton"
+            >
+                <span>⚡</span>
+                ПРЕОБРАЗОВАТЬ ГОЛОС
+            </button>
+        </div>
+        <div class="processing hidden" id="processing">
+            <div class="loader"></div>
+            <h3>Обработка голоса</h3>
+            <p>
+                AI анализирует аудио...
+            </p>
+        </div>
+        <div class="result-card hidden" id="resultCard">
+            <div class="result-title">
+                <span class="check">✓</span>
+                Готово
+            </div>
+            <p>
+                Твой преобразованный голос
+            </p>
+            <audio
+                id="resultPlayer"
+                controls
+            ></audio>
+            <a
+                id="downloadButton"
+                class="download-button"
+                download="voice-deep-result.wav"
+            >
+                ↓ Скачать результат
+            </a>
+        </div>
+    </section>
+</main>
+<footer>
+    <span>VOICE DEEP</span>
+    <span>AI VOICE TECHNOLOGY</span>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
